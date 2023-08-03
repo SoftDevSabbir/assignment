@@ -22,7 +22,7 @@ void main() {
   
   //Division in the dart
   
-  dynamic f= a/b;
+  double f= a/b;
   print(f);
   
   //Modulus in the dart
