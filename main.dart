@@ -27,6 +27,6 @@ void main() {
   
   //Modulus in the dart
   
- var g= 9%5;
+ int g= 9%5;
   print(g);
 }
