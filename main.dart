@@ -1,32 +1,22 @@
-
-//ostad Flutter batch-4; First Assignment
+///Ostad Batch-4 ; Module-2 Assainment
 
 void main() {
-  const int a= 9;
-  const int b= 5;
-  
-  //addtion in dart
-  
-  int c= a+b;
-  print(c);
-  
-  //subtraction in the dart
-  
-  int d=a-b;
-  print(d);
-  
-  //Multiplication in the dart
-  
-  int e=a*b;
-  print(e);
-  
-  //Division in the dart
-  
-  double f= a/b;
-  print(f);
-  
-  //Modulus in the dart
-  
- int g= 9%5;
-  print(g);
+  List<int> grades = [85, 92, 78, 65, 88, 72];
+  int sum = 0;
+
+  for (int grade in grades) {
+    sum += grade;
+  }
+
+  double average = sum / grades.length;
+  int roundedAverage = average.round();
+
+  print("Student's average grade: $average");
+  print("Rounded average: $roundedAverage");
+
+  if (roundedAverage >= 70) {
+    print('Passed');
+  } else {
+    print('Failed');
+  }
 }
