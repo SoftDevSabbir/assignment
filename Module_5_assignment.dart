@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
         toolbarHeight: 100,
         backgroundColor: Colors.green,
         leading: IconButton(
-          icon: Icon(Icons.add_home_work_sharp),
+          icon: Icon(Icons.add_business),
           onPressed: () {},
         ),
       ),
@@ -53,15 +53,15 @@ class HomePage extends StatelessWidget {
             RichText(
               text: TextSpan(
                   text: "My",
-                  style: TextStyle(fontSize: 35,
-                      color: Colors.pink),
+                  style: TextStyle(fontSize: 28,
+                      color: Colors.pink.shade600),
                   children: [
                     TextSpan(
                         text: " phone",
                         style: TextStyle(
                             fontSize: 19,
                             fontWeight: FontWeight.w600,
-                            color: Colors.green)),
+                            color: Colors.blue)),
                     TextSpan(
                         text: " name",
                         style: TextStyle(
@@ -70,11 +70,11 @@ class HomePage extends StatelessWidget {
                           color: Colors.purpleAccent,
                         )),
                     TextSpan(
-                        text: " Realme C21",
+                        text: " Your Phone Name",
                         style: TextStyle(
-                          fontSize: 35,
+                          fontSize: 28,
                           fontWeight: FontWeight.w400,
-                          color: Colors.amber.shade600,
+                          color: Colors.orangeAccent.shade400,
                         ))
                   ]),
             ),
