@@ -11,48 +11,77 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My Shopping List'),
+          title: Text(
+            'My Shopping List',
+            style: TextStyle(fontSize: 26),
+          ),
+          centerTitle: true,
           actions: [
             IconButton(
-              icon: Icon(Icons.shopping_cart),
+              icon: Padding(
+                padding: const EdgeInsets.only(right: 50.0),
+                child: Icon(
+                  Icons.shopping_cart,
+                  size: 40,
+                ),
+              ),
               onPressed: () {
                 // Handle cart icon click event here
               },
             ),
           ],
         ),
-        body: ShoppingList(),
+        body: Column(
+          children: [
+            SizedBox(height: 15),
+            ListTile(
+              title: Text(
+                'Apples',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
+              ),
+              leading: Icon(
+                Icons.shopping_basket,
+                size: 35,
+              ),
+            ),
+            SizedBox(height: 15),
+            ListTile(
+              title: Text(
+                'Bananas',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
+              ),
+              leading: Icon(
+                Icons.shopping_basket,
+                size: 35,
+              ),
+            ),
+            SizedBox(height: 15),
+            ListTile(
+              title: Text(
+                'Bread',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
+              ),
+              leading: Icon(Icons.shopping_basket, size: 35),
+            ),
+            SizedBox(height: 15),
+            ListTile(
+              title: Text(
+                'Milk',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
+              ),
+              leading: Icon(Icons.shopping_basket, size: 35),
+            ),
+            SizedBox(height: 15),
+            ListTile(
+              title: Text(
+                'Eggs',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
+              ),
+              leading: Icon(Icons.shopping_basket, size: 35),
+            ),
+          ],
+        ),
       ),
-    );
-  }
-}
-
-class ShoppingList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        ShoppingItem("Apples", Icons.shopping_bag),
-        ShoppingItem("Bananas", Icons.shopping_bag),
-        ShoppingItem("Bread", Icons.shopping_bag),
-        ShoppingItem("Milk", Icons.shopping_bag),
-        ShoppingItem("Eggs", Icons.shopping_bag),
-      ],
-    );
-  }
-}
-
-class ShoppingItem extends StatelessWidget {
-  final String itemName;
-  final IconData icon;
-
-  ShoppingItem(this.itemName, this.icon);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(icon),
-      title: Text(itemName),
     );
   }
 }
